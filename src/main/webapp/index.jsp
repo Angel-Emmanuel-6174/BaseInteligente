@@ -5,39 +5,7 @@
 <html>
 <head>
     <title>Listado de Usuarios</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 800px;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px;
-            text-align: left;
-        }
-        td {
-            padding: 10px;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f0f0f0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <h1>Listado de Usuarios</h1>
@@ -47,7 +15,13 @@
 %>
 
 <% if (usuarios != null && !usuarios.isEmpty()) { %>
-    <table>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar por ID, Nombre, Edad, Email o Teléfono...">
+        <button onclick="limpiarBusqueda()">Limpiar</button>
+    </div>
+    <div id="noResults" class="no-results">No se encontraron resultados para la búsqueda.</div>
+    
+    <table id="usuariosTable">
         <thead>
             <tr>
                 <th>ID</th>
@@ -73,5 +47,6 @@
     <p>No hay usuarios disponibles.</p>
 <% } %>
 
+<script src="js/search.js"></script>
 </body>
 </html>
