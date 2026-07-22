@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(urlPatterns = {"/", "/usuarios"})
+@WebServlet(urlPatterns = {"/usuarios"})
 public class ListarUsuariosServlet extends HttpServlet {
     @Resource(name = "jdbc/OracleCloudDB")
     private DataSource dataSource;
