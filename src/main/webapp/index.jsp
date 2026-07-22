@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Listado de Usuarios</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
 </head>
 <body>
 <h1>Listado de Usuarios</h1>
@@ -47,6 +47,6 @@
     <p>No hay usuarios disponibles.</p>
 <% } %>
 
-<script src="js/search.js"></script>
+<script src="${pageContext.request.contextPath}/js/search.js"></script>
 </body>
 </html>
