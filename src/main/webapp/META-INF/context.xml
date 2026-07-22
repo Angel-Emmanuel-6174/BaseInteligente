@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <!-- Definición del Pool de Conexiones administrado por Tomcat -->
+    <Resource name="jdbc/OracleCloudDB"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@(description=(retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1521)(host=adb.us-phoenix-1.oraclecloud.com))(connect_data=(service_name=g67a80e2f11374c_yzf1bl5klvkgbdi5_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
+              username="ADMIN"
+              password="Chinomirand@34"
+              maxTotal="10"
+              maxIdle="5"
+              maxWaitMillis="10000"/>
+</Context>
